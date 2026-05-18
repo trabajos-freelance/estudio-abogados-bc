@@ -1,0 +1,319 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contacto {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* IMAGEN FONDO */
+.contacto-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* CAPA OSCURA */
+.contacto-layer {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.58);
+}
+
+/* CONTENIDO */
+.contacto-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------------------- */
+/* BLOQUE SUPERIOR */
+/* -------------------------------- */
+
+.contacto-top {
+  position: absolute;
+
+  top: 120px;
+  left: 97px;
+
+  display: grid;
+  grid-template-columns: 360px 560px;
+
+  column-gap: 50px;
+
+  align-items: start;
+}
+
+/* IZQUIERDA */
+
+.contacto-brand h1 {
+  margin: 0 0 4px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1;
+
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.contacto-brand h2 {
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 33px;
+  line-height: 1.15;
+
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* & ASOCIADOS */
+
+.contacto-asociados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  width: 310px;
+
+  margin-top: 8px;
+}
+
+.contacto-asociados span {
+  width: 82px;
+  height: 1px;
+
+  background: #b89342;
+
+  opacity: 0.9;
+}
+
+.contacto-asociados p {
+  margin: 0;
+
+  color: #c9a24a;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+/* DERECHA */
+
+.contacto-direccion {
+  padding-top: 8px;
+}
+
+.contacto-direccion h3 {
+  margin: 0 0 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 1;
+
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contacto-direccion p {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 1.45;
+
+  font-weight: 700;
+}
+
+/* -------------------------------- */
+/* FORMULARIO */
+/* -------------------------------- */
+
+.contacto-form-area {
+  position: absolute;
+
+  top: 345px;
+  left: 507px;
+
+  width: 586px;
+}
+
+.contacto-form-area > p {
+  margin: 0 0 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: #fff;
+}
+
+.contacto-form {
+  display: grid;
+  grid-template-columns: 296px 285px;
+
+  gap: 8px;
+}
+
+.contacto-inputs {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+/* INPUTS */
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: #fff;
+
+  color: #333;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+  box-sizing: border-box;
+
+  border-radius: 0;
+}
+
+.contacto-form input {
+  height: 36px;
+
+  padding: 0 17px;
+}
+
+.contacto-form textarea {
+  height: 112px;
+
+  padding: 12px 17px;
+
+  resize: none;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+  color: #777;
+}
+
+/* BOTÓN */
+
+.contacto-submit {
+  grid-column: 2;
+
+  justify-self: end;
+
+  width: 112px;
+  height: 32px;
+
+  margin-top: 0;
+
+  border: 1px solid #c9a24a;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.contacto-submit:hover {
+  background: #c9a24a;
+  color: #111;
+}
+
+/* -------------------------------- */
+/* RESPONSIVE */
+/* -------------------------------- */
+
+@media (max-width: 900px) {
+
+  .contacto {
+    height: auto;
+    min-height: 100vh;
+
+    overflow: visible;
+  }
+
+  .contacto-content {
+    height: auto;
+    min-height: 100vh;
+
+    padding: 70px 24px;
+
+    box-sizing: border-box;
+  }
+
+  .contacto-top,
+  .contacto-form-area {
+    position: static;
+  }
+
+  .contacto-top {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    row-gap: 40px;
+  }
+
+  .contacto-form-area {
+    width: 100%;
+
+    margin-top: 55px;
+  }
+
+  .contacto-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-submit {
+    grid-column: 1;
+
+    justify-self: start;
+  }
+
+  .contacto-form textarea {
+    height: 130px;
+  }
+}

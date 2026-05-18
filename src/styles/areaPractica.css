@@ -1,0 +1,104 @@
+.area-practica {
+  width: 100%;
+  min-height: calc(100vh - 92px);
+  background: #464646;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px 80px;
+  box-sizing: border-box;
+}
+
+.area-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 70px;
+  align-items: start;
+}
+
+.area-title {
+  padding-top: 60px;
+}
+
+.area-title h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(230px, 1fr));
+  column-gap: 85px;
+  row-gap: 70px;
+}
+
+.area-card {
+  max-width: 280px;
+}
+
+.area-card-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.area-dot {
+  width: 8px;
+  height: 8px;
+  background: #f1cd3f;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.area-card h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+
+.area-card p {
+  margin: 0 0 0 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.18;
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+/* responsive mínimo */
+@media (max-width: 900px) {
+  .area-practica {
+    min-height: auto;
+    padding: 50px 24px;
+  }
+
+  .area-container {
+    grid-template-columns: 1fr;
+    row-gap: 45px;
+  }
+
+  .area-title {
+    padding-top: 0;
+  }
+
+  .area-grid {
+    grid-template-columns: 1fr;
+    row-gap: 45px;
+  }
+
+  .area-card {
+    max-width: 100%;
+  }
+}
