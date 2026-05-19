@@ -25,29 +25,46 @@ function AreaPractica() {
     },
   ]
 
+  const fila1 = areas.slice(0, 3)
+  const fila2 = areas.slice(3, 5)
+
   return (
-    <section className="area-practica">
-      <div className="area-container">
-        <div className="area-title">
-          <h2>
-            ÁREAS DE PRÁCTICA
-          </h2>
-        </div>
+    <div className="area-practica">
 
-        <div className="area-grid">
-          {areas.map((area, index) => (
-            <article className="area-card" key={index}>
-              <div className="area-card-title">
-                <span className="area-dot" />
-                <h3>{area.titulo}</h3>
-              </div>
-
-              <p>{area.texto}</p>
-            </article>
-          ))}
+      <div className="area-header">
+        <div className="area-eyebrow">
+          <span className="area-eyebrow-line" />
+          <span className="area-eyebrow-text">Servicios legales</span>
         </div>
+        <h1 className="area-title">ÁREAS DE PRÁCTICA</h1>
       </div>
-    </section>
+
+      <div className="area-row">
+        {fila1.map((area, i) => (
+          <div className="area-col" key={i}>
+            <p className="area-col-num">0{i + 1}</p>
+            <div className="area-col-title">
+              <h3>{area.titulo}</h3>
+            </div>
+            <p className="area-col-text">{area.texto}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="area-row area-row-2">
+        {fila2.map((area, i) => (
+          <div className="area-col" key={i}>
+            <p className="area-col-num">0{i + 4}</p>
+            <div className="area-col-title">
+              <h3>{area.titulo}</h3>
+            </div>
+            <p className="area-col-text">{area.texto}</p>
+          </div>
+        ))}
+        <div className="area-col-empty" />
+      </div>
+
+    </div>
   )
 }
 

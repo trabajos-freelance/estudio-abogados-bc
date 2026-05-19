@@ -1,104 +1,109 @@
 .area-practica {
   width: 100%;
-  min-height: calc(100vh - 92px);
-  background: #464646;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 70px 20px 80px;
-  box-sizing: border-box;
+  background: #0d0d0d;
 }
 
-.area-container {
-  width: 100%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  column-gap: 70px;
-  align-items: start;
+/* ── HEADER ── */
+
+.area-header {
+  background: #111;
+  padding: 72px 56px 56px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.area-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.area-eyebrow-line {
+  width: 24px;
+  height: 1px;
+  background: #C9A040;
+  flex-shrink: 0;
+}
+
+.area-eyebrow-text {
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C9A040;
 }
 
 .area-title {
-  padding-top: 60px;
-}
-
-.area-title h2 {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  line-height: 1.25;
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
   font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
+  color: #C9A040;
+  letter-spacing: 2px;
 }
 
-.area-grid {
+/* ── FILAS DE CARDS ── */
+
+.area-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(230px, 1fr));
-  column-gap: 85px;
-  row-gap: 70px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
 }
 
-.area-card {
-  max-width: 280px;
+.area-row-2 {
+  border-top: 1px solid #1a1a1a;
 }
 
-.area-card-title {
+/* ── CARD ── */
+
+.area-col {
+  background: #111;
+  padding: 52px 48px;
+  border-top: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.area-col:hover {
+  border-top-color: #C9A040;
+}
+
+.area-col-num {
+  margin: 0 0 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.area-col-title {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.area-dot {
-  width: 8px;
-  height: 8px;
-  background: #f1cd3f;
-  display: inline-block;
-  flex: 0 0 auto;
-}
 
-.area-card h3 {
+.area-col-title h3 {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  line-height: 1;
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
   font-weight: 700;
   font-variant: small-caps;
+  color: #C9A040;
 }
 
-.area-card p {
-  margin: 0 0 0 28px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 1.18;
-  font-weight: 600;
-  color: #f2f2f2;
+.area-col-text {
+  margin: 0;
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
 }
 
-/* responsive mínimo */
-@media (max-width: 900px) {
-  .area-practica {
-    min-height: auto;
-    padding: 50px 24px;
-  }
+/* ── CELDA VACÍA ── */
 
-  .area-container {
-    grid-template-columns: 1fr;
-    row-gap: 45px;
-  }
-
-  .area-title {
-    padding-top: 0;
-  }
-
-  .area-grid {
-    grid-template-columns: 1fr;
-    row-gap: 45px;
-  }
-
-  .area-card {
-    max-width: 100%;
-  }
+.area-col-empty {
+  background: #0d0d0d;
 }

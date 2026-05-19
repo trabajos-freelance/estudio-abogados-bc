@@ -6,75 +6,309 @@ html, body, #root {
     height: 100%;
 }
 
-/* contenedor */
-.home {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    background: black;
+/* ── HERO ── */
+
+.home-hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    background: #000;
+    min-height: 440px;
 }
 
-/* 🔥 IMAGEN SIN MÁRGENES */
-.home-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: right center; /* mantiene el martillo visible */
+.home-hero-left {
+    padding: 64px 56px;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* overlay */
-.home-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.85),
-        rgba(0, 0, 0, 0.4),
-        transparent
-    );
-    pointer-events: none;
+.home-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* texto */
-.home-content {
-    position: absolute;
-    left: 8%;
-    top: 20%;
-    color: white;
-    max-width: 520px;
-    font-family: 'Playfair Display', serif;
+.home-hero-eyebrow-line {
+    width: 24px;
+    height: 1px;
+    background: #C9A040;
+    flex-shrink: 0;
 }
 
-/* título */
-.home-content h1 {
+.home-hero-eyebrow-text {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C9A040;
+}
+
+.home-hero-title {
+    font-family: 'Cinzel', serif;
     font-size: 38px;
     font-weight: 400;
+    color: #fff;
+    margin: 0 0 16px;
     line-height: 1.1;
     letter-spacing: 1px;
-    margin: 0;
 }
 
-.home-content h1 span {
+.home-hero-title strong {
     display: block;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* subtítulo */
-.home-content p {
-    margin-top: 16px;
-    font-size: 15px;
+.home-hero-sub {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 18px;
     color: #e0e0e0;
     font-weight: 300;
     line-height: 1.6;
+    margin: 0 0 28px;
+}
+
+.home-hero-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.home-hero-btn {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.home-hero-btn:hover {
+    border-color: #C9A040;
+    color: #C9A040;
+}
+
+.home-hero-right {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+}
+
+/* ── STATS ── */
+
+.home-stats {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(102,67,0,0.15);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home-stats-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 48px;
+    border-right: 0.5px solid #1a1a1a;
+}
+
+.home-stats-cell:last-child {
+    border-right: none;
+}
+
+.home-stats-number {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #C9A040;
+}
+
+.home-stats-label {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 6px;
+}
+
+/* ── EQUIPO ── */
+
+.home-team {
+    background: #111;
+    padding: 52px 56px;
+}
+
+.home-section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.home-section-header h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.home-header-line {
+    flex: 1;
+    height: 1px;
+    background: #1e1e1e;
+}
+
+.home-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.team-card {
+    background: #1a1a1a;
+    border: 0.5px solid #2a2a2a;
+}
+
+.team-card-photo {
+    height: 200px;
+    background: #161616;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+.team-card-info {
+    padding: 14px 18px 20px;
+}
+
+.team-card-name {
+    margin: 0;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.team-card-cargo {
+    margin: 4px 0 0;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C9A040;
+}
+
+.team-card-sep {
+    width: 22px;
+    height: 1px;
+    background: rgba(102,67,0,0.2);
+    margin: 9px 0;
+}
+
+.team-card-esp {
+    margin: 0;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ── ÁREAS PREVIEW ── */
+
+.home-areas-preview {
+    background: #0d0d0d;
+    padding: 48px 56px;
+}
+
+.home-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: #1e1e1e;
+}
+
+.home-area-cell {
+    background: #0d0d0d;
+    padding: 20px 18px;
+}
+
+.home-area-nombre {
+    margin: 0 0 6px;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #C9A040;
+}
+
+.home-area-desc {
+    margin: 0;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ── CTA ── */
+
+.home-cta {
+    background: #C9A040;
+    padding: 18px 56px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-cta p {
+    margin: 0;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.home-cta button {
+    background: #000;
+    color: #C9A040;
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 14px;
+    padding: 8px 22px;
+    border: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.home-cta button:hover {
+    opacity: 0.8;
 }
