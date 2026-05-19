@@ -1,46 +1,90 @@
 .vision {
-    width: 100%;
+  width: 100%;
+  background: #111;
 }
 
-/* 🔝 BLOQUE GRIS */
-.vision-top {
-    background: #4f4f4f; /* más cercano al de la imagen */
-    color: white;
-    text-align: center;
+/* ── LAYOUT PRINCIPAL ── */
 
-    padding: 70px 20px 60px; /* 🔥 spacing real */
+.vision-layout {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  min-height: calc(100vh - 72px);
 }
 
-/* TÍTULO */
-.vision-top h2 {
-    color: #c9a24a;
-    font-size: 42px; /* 🔥 más grande como referencia */
-    margin-bottom: 35px;
-    letter-spacing: 2px;
-    font-weight: 600;
+/* ── COLUMNA IZQUIERDA ── */
+
+.vision-left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #1a1a1a;
 }
 
-/* TEXTO */
-.vision-top p {
-    max-width: 950px;
-    margin: 12px auto;
-    font-size: 16px;
-    line-height: 1.7;
-    color: #e5e5e5;
+.vision-hero {
+  padding: 52px 56px 44px;
+  border-bottom: 1px solid #1a1a1a;
 }
 
-/* 🔻 IMAGEN */
-.vision-bottom {
-    width: 100%;
-    height: 300px; /* ESTE VALOR ES CLAVE */
-    overflow: hidden;
+.vision-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
-.vision-bottom img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.vision-eyebrow-line {
+  width: 24px;
+  height: 1px;
+  background: #C9A040;
+  flex-shrink: 0;
+}
 
-    /* 🔥 ajuste fino para que coincida con tu referencia */
-    object-position: center 35%;
+.vision-eyebrow-text {
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C9A040;
+}
+
+.vision-title {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #C9A040;
+  letter-spacing: 2px;
+}
+
+/* ── TEXTO ── */
+
+.vision-body-left {
+  padding: 52px 56px;
+  flex: 1;
+}
+
+.vision-body-left p {
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 17px;
+  color: #bbb;
+  line-height: 1.85;
+  margin: 0 0 14px;
+}
+
+.vision-body-left p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── COLUMNA DERECHA (imagen) ── */
+
+.vision-right {
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.vision-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }

@@ -8,6 +8,7 @@ import AreaPractica from './Pages/AreaPractica'
 
 // Components
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 
 // Router
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -18,15 +19,17 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/nuestra-vision' element={<NuestraVision />} />
           <Route path='/contacto' element={<Contacto />} />
           <Route path='/area-practica' element={<AreaPractica />} />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
-      
+
     </>
   )
 }
