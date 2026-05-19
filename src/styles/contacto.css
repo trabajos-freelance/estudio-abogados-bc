@@ -5,6 +5,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .contacto {
@@ -187,6 +188,30 @@ body,
   color: #111;
 }
 
+.contacto-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contacto-feedback {
+  margin: 0;
+  font-family: 'Open Sauce One', sans-serif;
+  font-size: 14px;
+  padding: 10px 14px;
+}
+
+.contacto-feedback--ok {
+  color: #6fcf97;
+  border: 1px solid rgba(111, 207, 151, 0.3);
+  background: rgba(111, 207, 151, 0.05);
+}
+
+.contacto-feedback--error {
+  color: #eb5757;
+  border: 1px solid rgba(235, 87, 87, 0.3);
+  background: rgba(235, 87, 87, 0.05);
+}
+
 /* -------------------------------- */
 /* RESPONSIVE */
 /* -------------------------------- */
@@ -194,19 +219,30 @@ body,
 @media (max-width: 900px) {
   .contacto-content {
     grid-template-columns: 1fr;
+    min-height: auto;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .contacto-left {
-    padding: 64px 32px 40px;
+    padding: 48px 24px 40px;
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .contacto-right {
-    padding: 40px 32px 64px;
+    padding: 40px 24px 64px;
   }
 
   .contacto-form-row {
     grid-template-columns: 1fr;
+  }
+
+  .contacto-logo {
+    width: 200px;
+  }
+
+  .contacto-brand h1 {
+    font-size: 36px;
   }
 }
