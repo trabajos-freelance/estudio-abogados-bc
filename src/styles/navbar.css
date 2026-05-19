@@ -164,4 +164,8 @@
     .nav-right {
         display: none;
     }
+
+    .nav-logo {
+        height: 48px;
+    }
 }

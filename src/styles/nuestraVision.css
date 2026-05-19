@@ -88,3 +88,33 @@
   object-position: center top;
   display: block;
 }
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+  .vision-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .vision-right {
+    height: 280px;
+    order: -1;
+  }
+
+  .vision-hero {
+    padding: 36px 24px 28px;
+  }
+
+  .vision-title {
+    font-size: 28px;
+  }
+
+  .vision-body-left {
+    padding: 32px 24px 40px;
+  }
+
+  .vision-body-left p {
+    font-size: 16px;
+  }
+}
