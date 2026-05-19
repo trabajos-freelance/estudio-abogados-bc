@@ -107,3 +107,39 @@
 .area-col-empty {
   background: #0d0d0d;
 }
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+  .area-header {
+    padding: 40px 24px 36px;
+  }
+
+  .area-title {
+    font-size: 28px;
+  }
+
+  .area-row {
+    grid-template-columns: 1fr;
+  }
+
+  .area-row-2 {
+    border-top: none;
+  }
+
+  .area-col {
+    padding: 36px 24px;
+  }
+
+  .area-col-num {
+    font-size: 48px;
+  }
+
+  .area-col-title h3 {
+    font-size: 18px;
+  }
+
+  .area-col-empty {
+    display: none;
+  }
+}

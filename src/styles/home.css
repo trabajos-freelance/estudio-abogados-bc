@@ -312,3 +312,84 @@ html, body, #root {
 .home-cta button:hover {
     opacity: 0.8;
 }
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+    /* Hero */
+    .home-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .home-hero-right {
+        height: 240px;
+    }
+
+    .home-hero-left {
+        padding: 40px 24px;
+    }
+
+    .home-hero-title {
+        font-size: 28px;
+    }
+
+    .home-hero-title strong {
+        font-size: 40px;
+    }
+
+    .home-hero-sub {
+        font-size: 16px;
+    }
+
+    .home-hero-btns {
+        flex-direction: column;
+    }
+
+    /* Stats */
+    .home-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .home-stats-cell {
+        padding: 18px 24px;
+        border-right: none;
+        border-bottom: 0.5px solid #1a1a1a;
+    }
+
+    .home-stats-cell:last-child {
+        border-bottom: none;
+    }
+
+    /* Equipo */
+    .home-team {
+        padding: 40px 24px;
+    }
+
+    .home-team-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Áreas preview */
+    .home-areas-preview {
+        padding: 40px 24px;
+    }
+
+    .home-areas-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* CTA */
+    .home-cta {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .home-cta button {
+        width: 100%;
+        padding: 12px 22px;
+    }
+}
