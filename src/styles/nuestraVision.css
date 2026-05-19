@@ -93,25 +93,38 @@
 
 @media (max-width: 768px) {
   .vision-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     min-height: auto;
   }
 
-  .vision-right {
-    height: 280px;
-    order: -1;
+  .vision-left {
+    display: contents;
   }
 
   .vision-hero {
+    order: 1;
     padding: 36px 24px 28px;
+    border-bottom: none;
+  }
+
+  .vision-right {
+    order: 2;
+    height: 500px;
+    border-left: none;
+  }
+
+  .vision-img {
+    object-position: center top;
+  }
+
+  .vision-body-left {
+    order: 3;
+    padding: 32px 24px 40px;
   }
 
   .vision-title {
     font-size: 28px;
-  }
-
-  .vision-body-left {
-    padding: 32px 24px 40px;
   }
 
   .vision-body-left p {
